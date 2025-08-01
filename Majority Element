@@ -1,0 +1,16 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        d = {}
+        n = len(nums)
+        for i in nums:
+            if i in d:
+                d[i] = d[i]+1
+            else :
+                d[i] = 1
+        for i,j in d.items() :
+            if j > n//2 :
+                return i
