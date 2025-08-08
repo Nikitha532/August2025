@@ -1,0 +1,11 @@
+class Solution(object):
+    def firstMissingPositive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums = set(nums)
+        smallest = 1
+        while smallest in nums :
+            smallest += 1
+        return smallest
